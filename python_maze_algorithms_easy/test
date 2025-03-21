@@ -1,0 +1,26 @@
+import json
+import random
+
+def generate_random_config(file_path):
+    config = {
+        "dataStructure": "adjmat",
+        "rowNum": random.randint(3, 10),  # Random row count between 3 and 10
+        "colNum": random.randint(3, 10),  # Random column count between 3 and 10
+        "entrances": [
+            [random.randint(0, 2), random.randint(-1, 0)]
+            for _ in range(2)  # Generate 2 random entrances
+        ],
+        "exits": [
+            [random.randint(3, 5), random.randint(5, 7)]
+            for _ in range(2)  # Generate 2 random exits
+        ],
+        "generator": "recur",
+        "visualise": True
+    }
+
+    with open(file_path, 'w') as f:
+        json.dump(config, f, indent=4)
+
+# Specify the path to save the config file
+config_path = 'config.json'
+generate_random_config(config_path)

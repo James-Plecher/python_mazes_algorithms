@@ -1,0 +1,27 @@
+{
+    "dataStructure": "adjmat",
+    "rowNum": 25,
+    "colNum": 4,
+    "entrances": [
+        [
+            -1,
+            1
+        ],
+        [
+            -1,
+            3
+        ]
+    ],
+    "exits": [
+        [
+            22,
+            4
+        ],
+        [
+            4,
+            4
+        ]
+    ],
+    "generator": "recur",
+    "visualise": false
+}
